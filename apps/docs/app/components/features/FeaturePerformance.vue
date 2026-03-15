@@ -24,26 +24,26 @@ interface Benchmark {
 
 const benchmarks: Benchmark[][] = [
   [
-    { lib: 'evlog', ops: 1020000, color: 'accent-blue' },
-    { lib: 'consola', ops: 689700, color: 'amber-500' },
-    { lib: 'pino', ops: 472800, color: 'emerald-500' },
-    { lib: 'winston', ops: 373300, color: 'zinc-500' },
+    { lib: 'evlog', ops: 1750000, color: 'accent-blue' },
+    { lib: 'consola', ops: 1040000, color: 'amber-500' },
+    { lib: 'pino', ops: 508000, color: 'emerald-500' },
+    { lib: 'winston', ops: 202500, color: 'zinc-500' },
   ],
   [
-    { lib: 'evlog', ops: 818500, color: 'accent-blue' },
-    { lib: 'consola', ops: 476500, color: 'amber-500' },
-    { lib: 'pino', ops: 283400, color: 'emerald-500' },
-    { lib: 'winston', ops: 131900, color: 'zinc-500' },
+    { lib: 'evlog', ops: 1850000, color: 'accent-blue' },
+    { lib: 'pino', ops: 871000, color: 'emerald-500' },
+    { lib: 'winston', ops: 568500, color: 'zinc-500' },
+    { lib: 'consola', ops: 272200, color: 'amber-500' },
   ],
   [
-    { lib: 'evlog', ops: 7600000, color: 'accent-blue' },
-    { lib: 'pino', ops: 2410000, color: 'emerald-500' },
-    { lib: 'winston', ops: 1760000, color: 'zinc-500' },
-    { lib: 'consola', ops: 121500, color: 'amber-500' },
+    { lib: 'evlog', ops: 20520000, color: 'accent-blue' },
+    { lib: 'pino', ops: 7360000, color: 'emerald-500' },
+    { lib: 'winston', ops: 5430000, color: 'zinc-500' },
+    { lib: 'consola', ops: 299300, color: 'amber-500' },
   ],
 ]
 
-const benchLabels = ['String log', 'Structured (5 fields)', 'Logger creation']
+const benchLabels = ['Deep nested', 'Scoped logger', 'Logger creation']
 const activeBench = ref(0)
 
 function formatOps(ops: number): string {
@@ -232,7 +232,7 @@ onBeforeUnmount(() => {
               <span class="text-white font-medium tabular-nums">0</span>
               <span class="text-zinc-600 ml-1">deps</span>
               <span class="text-zinc-800 mx-3">/</span>
-              <span class="text-white font-medium tabular-nums">5.1 kB</span>
+              <span class="text-white font-medium tabular-nums">5.2 kB</span>
               <span class="text-zinc-600 ml-1">gzip</span>
               <span class="text-zinc-800 mx-3">/</span>
               <span class="text-white font-medium tabular-nums">12</span>
@@ -344,10 +344,10 @@ onBeforeUnmount(() => {
               </div>
               <div class="text-right">
                 <p class="font-mono text-xl font-medium text-accent-blue tabular-nums">
-                  ~7µs
+                  ~3µs
                 </p>
                 <p class="font-mono text-[10px] text-zinc-600">
-                  0.007ms
+                  0.003ms
                 </p>
               </div>
             </div>
