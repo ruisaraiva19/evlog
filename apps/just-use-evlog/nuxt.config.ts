@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@comark/nuxt',
-    '@vercel/analytics/nuxt',
+    '@vercel/analytics',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -40,11 +40,16 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    provider: 'iconify',
+    clientBundle: {
+      scan: true,
+    },
+  },
+
   app: {
     head: {
-      link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/evlog.svg' },
-      ],
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/evlog.svg' },],
     },
   },
 })
